@@ -23,6 +23,9 @@
     "type": "git",
     "url": "git://github.com/mean-expert-official/loopback-sdk-builder.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@fgirardin"
+  },
   "keywords": [
     "loopback",
     "cli",
