@@ -1,5 +1,5 @@
 {
-  "name": "@mean-expert/loopback-sdk-builder",
+  "name": "@fgirardin/loopback-sdk-builder",
   "version": "2.3.1",
   "description": "Tool for auto-generating Software Development Kits (SDKs) for LoopBack",
   "bin": {
@@ -24,7 +24,7 @@
     "url": "git://github.com/fgirardin/loopback-sdk-builder.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@fgirardin"
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "loopback",
