@@ -47,7 +47,7 @@ export class CookieBrowser {
    **/
   set(key: string, value: any, expires?: Date): void {
     this.cookies[key] = value;
-    let cookie = `${key}=${encodeURI(value)}; path=/${expires ? `; expires=${ expires.toUTCString() }` : ''}`;
+    let cookie = `${key}=${encodeURI(value)}; Domain=proximo.world; path=/${expires ? `; expires=${ expires.toUTCString() }` : ''}`;
     window.document.cookie = cookie;
   }
   /**
@@ -58,7 +58,7 @@ export class CookieBrowser {
    * This method will remove a cookie from the client.
    **/
   remove(key: string) {
-    document.cookie = key + '=; Domain=proximo.world; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = key + '=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     delete this.cookies[key];
   }
   /**
