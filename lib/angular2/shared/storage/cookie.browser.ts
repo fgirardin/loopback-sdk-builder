@@ -48,6 +48,8 @@ export class CookieBrowser {
   set(key: string, value: any, expires?: Date): void {
     this.cookies[key] = value;
     let cookie = `${key}=${encodeURI(value)}; domain=proximo.world; path=/${expires ? `; expires=${ expires.toUTCString() }` : ''}`;
+    console.log("set cookie");
+    console.log(cookie);
     window.document.cookie = cookie;
   }
   /**
