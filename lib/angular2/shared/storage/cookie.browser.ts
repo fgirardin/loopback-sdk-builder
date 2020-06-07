@@ -1,5 +1,7 @@
 /* tslint:disable */
 import { Injectable } from '@angular/core';
+import { LoopBackConfig } from '../../lb.config';
+
 export interface CookieInterface { [key: string]: any }
 /**
 * @author Jonathan Casarrubias <twitter:@johncasarrubias> <github:@mean-expert-official>
@@ -47,7 +49,8 @@ export class CookieBrowser {
    **/
   set(key: string, value: any, expires?: Date): void {
     this.cookies[key] = value;
-    let cookie = `${key}=${encodeURI(value)}; domain=proximo.world; SameSite=Lax; Secure; path=/${expires ? `; expires=${ expires.toUTCString() }` : ''}`;
+    const domain = LoopBackConfig.getDomain();
+    let cookie = `${key}=${encodeURI(value)}; domain=${domain}; path=/${expires ? `; expires=${ expires.toUTCString() }` : ''}`;
     console.log("set cookie");
     console.log(cookie);
     window.document.cookie = cookie;
@@ -60,7 +63,8 @@ export class CookieBrowser {
    * This method will remove a cookie from the client.
    **/
   remove(key: string) {
-    document.cookie = key + '=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    const domain = LoopBackConfig.getDomain();
+    document.cookie = key + '=; domain=${domain}; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     delete this.cookies[key];
   }
   /**
