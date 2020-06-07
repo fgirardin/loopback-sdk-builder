@@ -63,6 +63,8 @@ export class CookieBrowser {
   remove(key: string) {
     const domain = LoopBackConfig.getDomain();
     document.cookie = key + '=; domain='+domain+'; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    console.log("remove cookie");
+    console.log(key + '=; domain='+domain+'; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';);
     delete this.cookies[key];
   }
   /**
