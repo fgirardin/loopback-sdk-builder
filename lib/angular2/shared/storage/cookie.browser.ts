@@ -49,7 +49,7 @@ export class CookieBrowser {
    **/
   set(key: string, value: any, expires?: Date): void {
     this.cookies[key] = value;
-    const domain = LoopBackConfig.getDomain();
+    const domain = LoopBackConfig.getDomain();    
     let cookie = `${key}=${encodeURI(value)}; domain=${domain}; path=/${expires ? `; expires=${ expires.toUTCString() }` : ''}`;
     window.document.cookie = cookie;
   }
