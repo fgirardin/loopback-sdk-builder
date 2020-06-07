@@ -1,6 +1,6 @@
 /* tslint:disable */
 import { Injectable } from '@angular/core';
-import { LoopBackConfig } from '../../lb.config';
+import { LoopBackConfig } from '../lb.config';
 
 export interface CookieInterface { [key: string]: any }
 /**
