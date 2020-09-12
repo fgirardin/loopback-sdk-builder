@@ -1,6 +1,6 @@
 {
   "name": "@fgirardin/loopback-sdk-builder",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Tool for auto-generating Software Development Kits (SDKs) for LoopBack",
   "bin": {
     "lb-sdk": "bin/lb-sdk"
@@ -40,6 +40,11 @@
     "url": "http://mean.expert"
   },
   "contributors": [
+    {
+      "name": "Fabien Girardin",
+      "email": "fgirardin@gmail.com",
+      "url": "https://github.com/fgirardin"
+    },    
     {
       "name": "João Ribeiro",
       "email": "jonnybgod@gmail.com",
